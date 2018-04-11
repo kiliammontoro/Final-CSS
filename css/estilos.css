@@ -1,0 +1,53 @@
+header{
+  height: 100px;
+  padding: 15px;
+  background-color:  #5b7989;
+  border-radius: 10px 10px 0px 0px;
+  color: white;
+  vertical-align: bottom;
+
+}
+
+h1{
+  float: left;
+  text-shadow: 1px 1px 3px #02010a;
+}
+
+p{
+  float: right;
+
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+#banner img{
+  width: 100%;
+  margin: 0px;
+  background-color: #82c3a6;
+}
+
+#botonera{
+  height: ;
+  vertical-align: middle;
+  display: flex;
+  background-color: #82c3a6;
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 0px;
+
+  flex-direction: row;
+}
+
+.bot_img{
+  vertical-align: middle;
+  width: 50%;
+  text-align: center;
+}
+
+div a img{
+  width: 70%;
+}
