@@ -30,15 +30,18 @@ header p{
   float: right;
 }
 
-#menu a{
+nav a{
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
   margin: 8px;
 }
+nav a:active{
+  text-decoration: none;
+}
 
-#menu a:hover{
+nav a:hover{
   text-shadow: 0px 2px 5px #333333;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 #botonera a{
@@ -90,13 +93,13 @@ header p{
   text-align: center;
 }
 
-.bot_img02{
-  width: 33.33%;
-  padding: 15px 0px;
+img[ src$=jpg]{
+  margin: 15px 0px;
 }
 
-.sombra{
+img{
     box-shadow: 0px 3px 2px #02010a;
+    border: 4px solid black;
 }
 
 #botonera img{
@@ -104,9 +107,12 @@ header p{
   border: 4px solid black;
 }
 
+h2{
+  margin-top: -10px;
+}
+
 #botonera02 img{
   width: 80%;
-  border: 4px solid black;
 }
 
 #row01, #row02 {
@@ -116,7 +122,8 @@ header p{
 }
 
 #Bt01 img{
-  transition: rotate, 2s;
+  transition: rotate, 1s;
+  animation: izq 1s;
 }
 
 #Bt01 img:hover{
@@ -124,12 +131,12 @@ header p{
 }
 
 #Bt02 img{
-  transition: scale, position, rotate, 2s;
+  transition: translate, 1s;
+  animation: der 1s;
 }
 
 #Bt02 img:hover{
-
-  transform: rotate(10deg);
+  transform: translate(20px, -5px);
 
 }
 
@@ -169,6 +176,8 @@ img[src$=png]{
   width: 22px;
   position: relative;
   top: 5px;
+  border: 0px;
+  box-shadow: none;
 }
 
 div p{
@@ -205,6 +214,21 @@ footer a:hover{
 
 .foot_tit{
   font-size: 16px;
+}
+
+.fxblur{
+  -webkit-filter:blur(10px);
+  filter:blur(10px);
+}
+
+.fxgray{
+  -webkit-filter:grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.fxsepia{
+  -webkit-filter:sepia(90%);
+  filter: sepia(90%);
 }
 
 @media (max-width: 900px) {
@@ -251,11 +275,6 @@ footer a:hover{
       text-align: center;
     }
 
-    .bot_img02{
-      width: 100%;
-      padding: 15px 0px;
-    }
-
     #botonera img{
       width: 80%;
     }
@@ -281,9 +300,31 @@ footer a:hover{
 
 @-webkit-keyframes intro{
   from{
-    margin-top: 100px;
+    margin-top: 900px;
   }
   to{
     margin-top: 0px;
+  }
+}
+
+@-webkit-keyframes izq{
+  from{
+    position: relative;
+    right: 30px;
+  }
+  to{
+    position: relative;
+    right: 0px;
+  }
+}
+
+@-webkit-keyframes der{
+  from{
+    position: relative;
+    left: 30px;
+  }
+  to{
+    position: relative;
+    left: 0px;
   }
 }
